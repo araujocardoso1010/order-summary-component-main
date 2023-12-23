@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  min-height: 150vh;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: white;
+  width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 20px hsla(245, 75%, 52%, 0.1);
+}
+.container .image {
+  display: inline-block;
+  width: 450px;
+  height: 220px;
+  background-image: url("../images/illustration-hero.svg");
+}
+.container .description {
+  padding: 2.5em 3em 3em;
+  text-align: center;
+}
+.container .description .title {
+  color: hsl(223, 47%, 23%);
+  font-size: 1.75em;
+  font-weight: 900;
+  margin-bottom: 0.6em;
+}
+.container .description .text {
+  color: hsl(224, 23%, 55%);
+  line-height: 1.6em;
+  margin-bottom: 1.2em;
+}
+.container .description .pricing-card {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+.container .description .pricing-card .music-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/icon-music.svg");
+}
+.container .description .pricing-card .text {
+  margin-right: auto;
+  margin-bottom: 0;
+}
+.container .description .pricing-card .text .title,
+.container .description .pricing-card .text .price {
+  font-size: 1.05em;
+  margin-bottom: 0;
+}
+.container .description .pricing-card .link {
+  color: hsl(245, 75%, 52%);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+.container .description .pricing-card .link:hover {
+  color: hsla(245, 75%, 52%, 0.8);
+  text-decoration: none;
+}
+.container .description .primary-btn {
+  display: block;
+  background-color: hsl(245, 75%, 52%);
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  font-weight: 700;
+  font-size: 0.95em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  box-shadow: 0 20px 20px hsla(245, 75%, 52%, 0.2);
+  transition: background-color 0.2s;
+}
+.container .description .primary-btn:hover {
+  background-color: hsla(245, 75%, 52%, 0.8);
+}
+.container .description .secondary-btn {
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+  font-size: 0.95em;
+  font-weight: 900;
+}
+.container .description .secondary-btn:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
+  body .container {
+    width: 330px;
+  }
+  body .container .image {
+    width: 330px;
+    height: 160px;
+    background-size: cover;
+  }
+  body .container .description {
+    padding: 1.5em 1.5em 2em;
+  }
+  body .container .description .title {
+    font-size: 1.4em;
+  }
+  body .container .description .text {
+    margin: 0 0.6em 1.5em;
+  }
+  body .container .description .pricing-card {
+    padding: 1em;
+    margin-bottom: 1.55em;
+    gap: 1.2em;
+  }
+  body .container .description .pricing-card .text {
+    line-height: 1.3em;
+  }
+  body .container .description .pricing-card .text .title,
+  body .container .description .pricing-card .text .price {
+    font-size: 0.9em;
+  }
+  body .container .description .pricing-card .link {
+    font-size: 0.8em;
+  }
+  body .container .description .primary-btn {
+    margin-bottom: 1.55em;
+  }
+}
